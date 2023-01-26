@@ -1,0 +1,214 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#cont:target > menu-fixed {
+  width: 120px;
+  background: rgb(0, 0, 0);
+  transition: all 0.3s;
+}
+#cont:target > menu-fixed > a .fa-solid.back {
+  display: none;
+}
+#cont:target > menu-fixed > .menu li {
+  text-align: center;
+}
+#cont:target > menu-fixed > .menu li > p {
+  display: none;
+}
+
+#menu-fixed {
+  width: 120px;
+  z-index: 2;
+  height: 100%;
+  background: #0F0F0F;
+  position: fixed;
+  transition: all 0.3s;
+  box-shadow: inset -4px -1px 20px 2px rgba(0, 0, 0, 0.19), 8px 0px 10px rgba(0, 0, 0, 0.23);
+  text-align: center;
+  overflow: auto;
+}
+#menu-fixed .fa-solid.back {
+  display: none;
+  color: white;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  font-size: 21px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+#menu-fixed .fa-solid.back:hover {
+  color: #009688;
+  transition: color 0.3s;
+}
+#menu-fixed:target {
+  width: 12em;
+  background: #000;
+  transition: all 0.3s ease-out;
+}
+#menu-fixed:target > .notes {
+  transition: all 0.2s;
+  z-index: 0;
+  opacity: 0;
+}
+#menu-fixed:target > a .fa-solid.back {
+  display: block;
+}
+#menu-fixed:target > a > .logo {
+  width: 60%;
+  height: 47px;
+  margin: auto;
+  margin-top: 5px;
+}
+#menu-fixed:target > a > .logo > span {
+  display: none;
+}
+#menu-fixed:target > a > .logo > p {
+  display: block;
+}
+#menu-fixed:target > .menu li {
+  text-align: left;
+}
+#menu-fixed:target > .menu li:hover::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(38, 166, 154, 0.1);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 4px;
+}
+#menu-fixed:target > .menu li:hover > p {
+  color: white;
+}
+#menu-fixed:target > .menu li > p {
+  display: inline-block;
+}
+#menu-fixed .logo {
+  width: 100%;
+  height: 70px;
+  position: relative;
+  cursor: pointer;
+}
+#menu-fixed .logo p {
+  display: none;
+  color: #999;
+  font-size: 23px;
+  padding-bottom: 0;
+  font-weight: 300;
+}
+#menu-fixed .logo .fa-cube {
+  top: 30px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  transition: all 0.2s;
+  color: white;
+  font-size: 30px;
+}
+#menu-fixed .logo:hover ~ p {
+  color: white;
+  transition: all 0.3s;
+}
+#menu-fixed .logo:hover > span {
+  width: 0;
+  height: 0;
+  border-left: 12px solid white;
+  border-right: 12px solid rgba(0, 0, 0, 0);
+  border-top: 12px solid rgba(0, 0, 0, 0);
+  border-bottom: 12px solid rgba(0, 0, 0, 0);
+  transition: all 0.2s;
+  transform: rotateZ(0deg) translateX(10px);
+  -webkit-transform: rotateZ(0deg) translateX(10px);
+}
+#menu-fixed .logo:hover > span::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-left: 8px solid #111;
+  border-right: 8px solid rgba(0, 0, 0, 0);
+  border-top: 8px solid rgba(0, 0, 0, 0);
+  border-bottom: 8px solid rgba(0, 0, 0, 0);
+  left: -15px;
+  position: absolute;
+  top: -8px;
+}
+#menu-fixed .pmenu {
+  margin: 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 14px;
+  font-weight: 300;
+}
+#menu-fixed hr {
+  border: 0.01em solid rgba(255, 255, 255, 0.2);
+}
+#menu-fixed .menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+#menu-fixed .menu li {
+  padding: 15px;
+  width: 100%;
+  margin: auto;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom-style: dotted;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.3s;
+}
+#menu-fixed .menu li:hover {
+  background: #000;
+  transition: all 0.3s;
+}
+#menu-fixed .menu li:hover > .fa-solid,
+#menu-fixed .menu li:hover .fa-brands {
+  color: white;
+}
+#menu-fixed .menu li .fa-solid,
+#menu-fixed .menu li .fa-brands {
+  color: #999;
+  font-size: 1.5em;
+}
+#menu-fixed .menu p {
+  display: none;
+  margin: auto;
+  color: #888;
+  font-size: 25px;
+  font-weight: 300;
+  position: absolute;
+  padding-left: 1em;
+  line-height: 0.8em;
+}
+
+.fa-circle-info.info {
+  color: #999;
+  position: absolute;
+  margin: 0;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+}
+.fa-circle-info.info:hover {
+  cursor: pointer;
+  color: #fff;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
