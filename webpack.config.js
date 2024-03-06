@@ -22,7 +22,7 @@ const apps = [
     name: 'app_b',
     appPath: 'app/views/app_b.ejs',
     entry: [ client_path + '/app_b/index.js' ],
-    template: 'app/views/[name].ejs',
+    template: 'app/views/[name].ejs'
   }
 
 ];
